@@ -1,0 +1,53 @@
+{% extends 'base.html' %} 
+{% block title %}Home{% endblock title %} 
+{% block body %}
+{% load static %}
+<div class="container-fluid px-0 margin-botton:0" >
+  <img src="{% static 'bckd-image.jpg' %}" class="d-block w-100" alt="..." style="height:34rem;"/>
+  <h1 style="position:absolute; top:15rem; left:26rem; color:rgb(230,250,20);  font-size:7rem; font-family: 'Lobster', cursive;">♫Surr Taal...<h1>
+  <div style="background-color:maroon;">
+    <h4 style="position:absolute; top:27rem; left:32rem; color:white;" class="text-center" style="margin: 1.5rem auto;"><i>" Where words fail, Music speaks "</i></h4>
+    <h5 style="position:absolute; top:29.5rem; left:36rem; color:white;" >~hans christian andersen</h5>
+  </div>
+</div>
+<div class="container-fluid" style="background-color: #EBC7E8; margin:0;">
+<div style="padding:3rem; width:40rem;" >
+  <form method="GET" class="form" action="/output" style=" padding:1rem; border:1px solid gray; width:40rem;margin-left:2rem;">
+    <label>Enter the song you want to search for:</label> <br>
+    <input type="text" name="sname" style="width:25rem;">
+    <button class="btn btn-primary" type="submit" > Search </button>
+  </form>
+</div>
+<div style="border:1px solid black; margin-left:5rem; width:45%; margin-bottom:1rem;">
+<div  style="display: inline-block; margin:0.5rem; padding:0.5rem; margin-left:2rem;">
+  <table >
+    <tr >
+      <th  >  Artist Name</th>
+    </tr>
+    
+      {% for word in artist %}
+      <tr>
+        <td> {{word}} </td> 
+        </tr>
+      {% endfor %}
+    
+  </table>
+</div>
+<div style="display: inline-block; margin:0.5rem; padding:0.5rem; margin-left:2.5rem;">
+  <table>
+    <tr>
+      <th> Song Name</th>
+    </tr>
+    
+      {% for word in name %}
+      <tr>
+        <td> {{word}} </td>
+        </tr> 
+      {% endfor %}
+    
+  </table>
+</div> 
+</div>
+</div>
+
+{% endblock body %}

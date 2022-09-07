@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{% block title %}{% endblock title %} | My Website</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      input,textarea{
+        margin:0.5rem;
+        padding:0.25rem;
+      }
+      form{
+        font-size:1.2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Author of this page : {{var1}} -->
+    <!-- this is the syntax to include content from context in views.py -->
+
+    <!--Navbar-->
+
+    <!--<nav class="navbar navbar-expand-lg bg-light">-->
+    <!--for light theme-->
+
+    <nav class="navbar navbar-expand-lg "  style="background-color: #BFACE0">
+      <!--for dark theme-->
+      <div class="container-fluid">
+        <a
+          class="navbar-brand"
+          href="#"
+          style="margin-left: 0.8rem; font-size: 2rem"
+          ><b>♫Surr Taal...</b></a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="/"
+                style="margin: 2px"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about" style="margin: 2px">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contact" style="margin: 2px"
+                >Contact US</a
+              >
+            </li>
+            {% comment %}
+            <li class="nav-item dropdown" style="margin-right: 2rem">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Options
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="/services">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </li>
+            {% endcomment %} {% comment %}
+            <li class="nav-item">
+              <a class="nav-link disabled">Disabled</a>
+            </li>
+            {% endcomment %}
+          </ul>
+          {% comment %}
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+          {% endcomment %}
+        </div>
+      </div>
+    </nav>
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-{{message.tags}} alert-dismissible fade show my-0" role="alert">
+      {{message}}
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {% endfor %}
+    {% endif %}
+
+    {% block body %}{% endblock body %}
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+    <footer style="background-color:#BFACE0 ;padding:1rem; text-align:center" >
+      <h3>♫ Surr Taal...</h3>
+      <h6>Copyright © 2022 ,SurrTaal.com</h6>
+      Authors: Saanvi & Maanvika
+    </footer>
+  </body>
+</html>

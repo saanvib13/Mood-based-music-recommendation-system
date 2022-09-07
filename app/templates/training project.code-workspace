@@ -1,0 +1,13 @@
+{
+  "folders": [
+	{
+		"name": "training project",
+		"path": "../../../../cpython-summer training/training project"
+	},
+	{
+		"name": "DjangoBasics",
+		"path": ".."
+	}
+],
+  "settings": {}
+}

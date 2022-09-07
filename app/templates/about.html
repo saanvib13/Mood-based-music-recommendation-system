@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block title %}About{% endblock title %}
+{% block body %}
+{% load static %}
+<div class="my-4" style="background-color: #EBC7E8 ; padding:0.5rem 5rem; border-radius:5px;" >
+    <h1 style="display:inline-block; background-color:#A084CA; padding:0.4rem 5rem; ">About Us</h1>
+    <img src="{% static 'about-wp2.jpg' %}"  alt="..." style=" width:300px;height:200px; border-radius:45%;"/>
+</div>
+<div class="container">
+
+<h1 style=><b>Welcome to Surr Taal...</b></h1>
+
+<p style="font-size:1.2rem;  padding:1rem;"><b> Surr Taal.. is a music application which makes it easier for users to search and listen to the music based on how they feel.
+    It is a very easy to use application recommending you songs that you might wish to listen to.
+    <br><br>
+    Wondering how to use it? 🤔 <br>
+    Don't worry!! we've got you covered 🤗
+    <br>
+    Just tell us how you are feeling and we have your mood based playlist prepared especially for you !!
+    <br>
+    Are you in love?!! <br>
+    Take our suggestion!! Enter your mood and impress your crush with the best song choices
+    <br> 
+    Do you feel sad?! <br>
+    We have your back! We recommend you songs that you will relate to and might enlighten your mood.
+
+    Do you wish to party? <br>
+    Not a problem!! We have a party playlist ready for you!! <br>
+
+    Sounds fun,does'nt it? <br> What are you waiting for? 
+    Go ahead !! </b>
+</p>
+<a class="btn btn-success" href="/" style="margin-left:32rem; margin-bottom:5rem; padding:0.5rem;"> Get Started </a>
+</div> 
+{% endblock body %}
